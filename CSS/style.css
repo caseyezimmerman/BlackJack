@@ -1,3 +1,161 @@
 body{
-	background-color: blue;
+	/* background: url("background.jpg") center; */
+}
+
+
+
+.the-table{
+	/* background: url("blackjack.jpg") no-repeat center; */
+	width: 90%;
+	background-color: #163813;
+	/* background: url("border.png")  center; */
+	
+	/* border-radius: 50%; */
+
+	border-image: url("border2.png") 30% stretch;
+	
+	border-top: 15px solid transparent;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 30px solid transparent;
+	
+	/* margin-top: 20px; */
+
+	padding: 0px 30px;
+	color: #ffdc19;
+	min-height: 700px;
+	transform: perspective(1100px) rotateX(25deg);
+	margin-left: 20px
+	
+	/* transform: rotateX(45deg); */
+}
+
+
+
+
+.card{
+	height: 150px;
+	/* background-color: white; */
+	padding: 5px;
+	/* border: 1px solid #ffdc19; */
+	/* margin: 1px; */
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #277714
+
+
+
+
+}
+
+.card img{
+	max-height: 100%;
+	max-width: 100%;
+	
+
+
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+}
+
+
+
+.btn{
+	margin-top: 10px;
+	margin-bottom: 30px;
+
+}
+
+#bets{
+	width: 100%;
+	/* margin: auto; */
+	/* text-align: center; */
+}
+#bet{
+	/* position: absolute; */
+	/* margin-left: 270px; */
+	/* margin-top: 450px; */
+	/* text-align: center; */
+	margin: auto;
+	height: 100px;
+	width: 150px;
+	/* background-color: black; */
+	border: 2px solid #ffdc19;
+	
+	text-align: center;
+
+}
+
+h1{
+	margin: auto;
+	background-color: #darkred;
+	border-radius: 30%;
+	width: 40%;
+	text-align: center;
+	color: #ffdc19;
+	font-size: 60px;
+}
+
+.player-total{
+	margin-right: 10px;
+	margin-left: 20px;
+}
+
+.dealer-total{
+	margin-right: 10px;
+	margin-left: 20px;
+}
+
+.title{
+	margin-left: 20px;
+}
+
+.act{
+	background-color: darkred;
+	color: black;
+	height: 50px;
+	width: 70px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.chips{
+	position: absolute;
+	margin-left: 200px;
+	margin-top:-70px;
+	/* margin-top: 100px; */
+}
+
+.reset-button{
+	margin-left:50px;
+	background-color: transparent;
+	position: absolute;
+}
+
+.deck{
+	display: inline;
+	 position: absolute; 
+	/* margin-left:-350px; */
+	/* margin-top: 120px; */
+}
+
+.betting{
+	background-color: black;
+	color: white;
+	margin-bottom: 40px;
+
+}
+
+#bet > .message{
+	margin-top: 20px;
+}
+
+.animated.flipInY{
+	animation-duration: .50s;
+}
+
+.animated.bounceInUp{
+	animation-duration: .75s;
 }

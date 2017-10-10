@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BlackJack</title>
+
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script2.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+
+
+	</head>
+<body>
+
+	<!-- Layout...
+	1. Create an elemnt for out table
+	2. Make it green
+	3. give it a border(white)
+	4. Create an element for the dealers ahnd and the players hand
+	5. Create an element for the dealers total and the players total
+	6. Create a element inside each hang for each car (max of 6)
+	7. make a deal, hit, and stand button -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 the-table">
+				<div class="row">
+					<div class="dealer-hand-wrapper col-sm-12">
+						<div class="col-sm-2">
+							Dealer Total: <span class="dealer-total">0</span>
+						</div>
+						<div class="col-sm-10 dealer-cards">
+							<div class="card card-1 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-2 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-3 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-4 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-5 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-6 col-sm-2"><img src="images/cards/deck.png"></div>
+						</div>
+					</div>
+					<div class="player-hand-wrapper col-sm-12">
+						<div class="col-sm-2">
+							Player Total: <span class="player-total">0</span>
+						</div>
+						<div class="col-sm-10 player-cards">
+							<div class="card card-1 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-2 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-3 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-4 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-5 col-sm-2"><img src="images/cards/deck.png"></div>
+							<div class="card card-6 col-sm-2"><img src="images/cards/deck.png"></div>
+						</div>
+					</div>
+					<div class="the-buttons">
+						<div class="col-sm-2 col-sm-offset-3">
+							<button class="btn btn-primary deal-button">Deal</button>
+						</div>
+						<div class="col-sm-2 col-sm-offset-1">
+							<button class="btn btn-primary hit-button">Hit</button>
+						</div>
+						<div class="col-sm-2 col-sm-offset-1">
+							<button class="btn btn-primary stand-button">Stand</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- the-table -->
+		</div> <!-- row -->
+	</div> <!-- container -->
+
+</body>
+</html>
