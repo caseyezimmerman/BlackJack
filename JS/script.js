@@ -142,21 +142,21 @@ $(document).ready(function(){
 
 	$(".bet1-button").click(function(){
 		console.log("bet 1 clicked")
-		$(".message").html(`<img class="animated bounceInUp" src="bluechip.png" />`)
+		$(".message").html(`<img class="animated bounceInUp" id="draggable" src="bluechip.png" />`)
 		$(".currentBets").html(+1)
 	})
 
 	$(".bet5-button").click(function(){
 		console.log("bet 5 clicked")
 		$(".message").html("")
-		$(".message1").html(`<img class="animated bounceInUp" src="redchip.png" />`)
+		$(".message1").html(`<img class="animated bounceInUp" id="draggable" src="redchip.png" />`)
 		$(".currentBets").html(+5)
 	})
 
 	$(".bet25-button").click(function(){
 		console.log("bet 25 clicked")
 		$(".message").html("")
-		$(".message2").html(`<img class="animated bounceInUp" src="greenchip.png" />`)
+		$(".message2").html(`<img class="animated bounceInUp" id="draggable" src="greenchip.png" />`)
 		$(".currentBets").html(+25)
 	})
 
@@ -174,34 +174,53 @@ $(document).ready(function(){
 		var dealersTotal = calculateTotal(dealersHand, 'dealer');
 		
 		if (playersTotal > 21){
-			$(".player-total").html(`${playersTotal}: Busted`)
-			$(".dealer-total").html(`${dealersTotal}: You win`)
+			// $(".player-total").html(`${playersTotal}: Busted`)
+			// $(".dealer-total").html(`${dealersTotal}: You win`)
+			modal("Dealer")
 		}else if (dealersTotal > 21){
-			$(".dealer-total").html(`${dealersTotal}: Busted`)
-			$(".player-total").html(`${playersTotal}: You win`)
+			// $(".dealer-total").html(`${dealersTotal}: Busted`)
+			// $(".player-total").html(`${playersTotal}: You win`)
+			modal("Player")
 		}else if(playersHand.length == 2 && playersTotal == 21){
-			$(".player-total").html("BLACKJACK")
+			// $(".player-total").html("BLACKJACK")
+			modal("Player")
 		}else if(dealersHand.length == 2 && dealersTotal == 21){
-			$(".dealer-total").html("BLACKJACK")
+			// $(".dealer-total").html("BLACKJACK")
+			modal("Dealer")
 		}else if((dealersTotal & playersTotal) > 17 && (playersTotal > dealersTotal)){
-			$(".dealer-total").html(`${dealersTotal}: Sorry, you lose`)
-			$(".player-total").html(`${playersTotal}: Congratulations, you win`)
+			// $(".dealer-total").html(`${dealersTotal}: Sorry, you lose`)
+			// $(".player-total").html(`${playersTotal}: Congratulations, you win`)
+			modal("Player")
 		}else if((dealersTotal & playersTotal) > 17 && (dealersTotal > playersTotal)){
-			$(".player-total").html(`${playersTotal}: Sorry, you lose`)
-			$(".dealer-total").html(`${dealersTotal}: Congratulations, you win`)
+			// $(".player-total").html(`${playersTotal}: Sorry, you lose`)
+			// $(".dealer-total").html(`${dealersTotal}: Congratulations, you win`)
+			modal("Dealer")
 		}else if((dealersTotal & playersTotal > 17) && dealersTotal == playersTotal){
-			$(".player-total").html(`${playersTotal}: Tie`)
-			$(".dealer-total").html(`${dealersTotal}: Tie`)
+			// $(".player-total").html(`${playersTotal}: Tie`)
+			// $(".dealer-total").html(`${dealersTotal}: Tie`)
+			modal()
 		}else if(dealersTotal == 21){
-			$(".dealer-total").html(`${dealersTotal}: You win`)
+			// $(".dealer-total").html(`${dealersTotal}: You win`)
+			modal("Dealer")
 		}else if(playersTotal == 21){
-			$(".player-total").html(`${playersTotal}: You win`)
+			// $(".player-total").html(`${playersTotal}: You win`)
+			modal("Player")
 		}
+		
+	
+		
 		
 		gameOver = true
 		resetGame();
 
 	}
+
+		function modal(who){
+			setTimeout(function(){
+			$('#myModal').modal('show')
+			$(".modal-body").html(`${who} wins!`)
+			}, 2000)
+		}
 
 		function resetGame(){
 		// $(".card").html("-")
@@ -308,5 +327,10 @@ $(document).ready(function(){
 		// console.log(theDeck)
 		return aDeckToBeShuffled;
 	}
+
+
+	$( function() {
+	    $( "#draggable" ).draggable();
+	  } );
 	
 })

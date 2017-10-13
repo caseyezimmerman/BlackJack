@@ -1,5 +1,6 @@
 body{
 	/* background: url("background.jpg") center; */
+	background: url("red-background.jpg") center;
 }
 
 
@@ -10,21 +11,21 @@ body{
 	background-color: #163813;
 	/* background: url("border.png")  center; */
 	
-	/* border-radius: 50%; */
+	border-radius: 0 0 50% 50%;
 
-	border-image: url("border2.png") 30% stretch;
+	/* border-image: url("border2.png") 30% stretch; */
 	
-	border-top: 15px solid transparent;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 30px solid transparent;
+	border-top: 1px solid  #1a0d00;
+	border-left: 3px solid  #1a0d00;
+	border-right: 3px solid  #1a0d00;
+	border-bottom: 50px solid #1a0d00;
 	
 	/* margin-top: 20px; */
 
 	padding: 0px 30px;
 	color: #ffdc19;
 	min-height: 700px;
-	transform: perspective(1100px) rotateX(25deg);
+	transform: perspective(1100px) rotateX(30deg);
 	margin-left: 20px
 	
 	/* transform: rotateX(45deg); */
@@ -158,4 +159,8 @@ h1{
 
 .animated.bounceInUp{
 	animation-duration: .75s;
+}
+
+#draggable { 
+	z-index: 2;
 }
